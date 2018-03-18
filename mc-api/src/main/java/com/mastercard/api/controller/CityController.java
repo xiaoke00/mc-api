@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.mastercard.api.service.CityCheckerService;
 
 @Controller
-public class MasterCardApiController {
+public class CityController {
 
-	private static Logger LOGGER = LogManager.getLogger(MasterCardApiController.class);
+	private static Logger LOGGER = LogManager.getLogger(CityController.class);
 	
 	@Autowired
 	private CityCheckerService cityCheckerService;

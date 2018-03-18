@@ -13,13 +13,13 @@ import com.mastercard.api.service.CityCheckerServiceImpl;
 
 //@RunWith(MockitoJUnitRunner.class)
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes= {MasterCardApiController.class, CityCheckerServiceImpl.class, CityCheckerService.class})
+@SpringBootTest(classes= {CityController.class, CityCheckerServiceImpl.class, CityCheckerService.class})
 
-public class MasterCardApiControllerTest {
+public class CityControllerTest {
 
 	
 	@Autowired
-	MasterCardApiController codeChallengeController;
+	CityController codeChallengeController;
 	
 	@Test
 	public void hasConnectionTest() {
