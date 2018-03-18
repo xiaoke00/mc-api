@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>mc-api</name>
-	<description>code challenge for master card</description>
+	<description>api for master card</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
