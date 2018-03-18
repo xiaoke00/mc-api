@@ -2,10 +2,13 @@ package com.mastercard.api.service;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.File;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
@@ -59,8 +62,13 @@ public class CityCheckerServiceImplTest {
 		assertEquals(true, cityCheckerService.isCityExist("Philadelphia"));
 		assertEquals(false, cityCheckerService.isCityExist("New Jersey"));
 		assertEquals(false, cityCheckerService.isCityExist("New Haven"));
-
-
+	}
+	
+	@Test
+	public void isFileExist() throws Exception{
+		
+		File file = new ClassPathResource("city.txt").getFile();
+		assertEquals(true, file.exists());
 		
 	}
 }

@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.mastercard.api.service.CityCheckerService;
 
 @Controller
-public class CodeChallengeController {
+public class MasterCardApiController {
 
-	private static Logger LOGGER = LogManager.getLogger(CodeChallengeController.class);
+	private static Logger LOGGER = LogManager.getLogger(MasterCardApiController.class);
 	
 	@Autowired
 	private CityCheckerService cityCheckerService;
@@ -38,13 +38,5 @@ public class CodeChallengeController {
 		}
 		
 		return cityCheckerService.convertAnswer(isConnected);
-	}
-	
-	@RequestMapping(value = "/connected/Test", method = RequestMethod.GET)
-	public @ResponseBody Map<String, Object> shasConnection() {
-		Map<String, Object > map = new HashMap<String,Object>(); 
-		
-		map.put("test", "abc");
-		return map;
 	}
 }

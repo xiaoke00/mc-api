@@ -41,7 +41,6 @@ public class CityCheckerServiceImpl implements CityCheckerService{
 		while(queue.size() != 0) {
 			String currentCity = queue.poll();
 			hasVisited.add(currentCity);
-			LOGGER.info(hasVisited.toString());
 
 			LinkedList<String> citySet = graph.connectionNodes(currentCity);
 			
